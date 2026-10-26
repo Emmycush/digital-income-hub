@@ -1,39 +1,43 @@
-# Digital Income Hub — Starter
+# Digital Income Hub
 
-This is the first static website scaffold for Digital Income Hub. It is separate from CyberSafe Academy and uses plain HTML, CSS, and JavaScript so it can be hosted for free on a static host.
+Digital Income Hub provides practical guides, tools, and safety information to help people explore online earning opportunities.
 
-## Files
-- `index.html` — responsive homepage
-- `styles.css` — shared design system and responsive layout
-- `app.js` — expandable category data and mobile navigation
-- `about.html`, `contact.html`, `privacy.html`, `disclaimer.html`, `affiliate-disclosure.html`, `terms.html` — initial page drafts
+The website uses static HTML, CSS, and JavaScript and is designed for free static hosting.
+
+## Main files
+
+- `index.html` — homepage, opportunity finder, comparison tools, and safety features
+- `styles.css` — responsive layout and shared design
+- `app.js` — opportunity data and interactive website features
+- `guides/` — platform and online earning guides
+- `about.html` — about the project
+- `contact.html` — contact information
+- `privacy.html` — privacy policy
+- `terms.html` — terms of use
+- `disclaimer.html` — website disclaimer
+- `affiliate-disclosure.html` — affiliate and referral disclosure
 
 ## Run locally
-Open `index.html` in a browser, or run a local static server from this folder:
-```sh
-python -m http.server 8000
-```
-Then open `http://127.0.0.1:8000`.
 
-## Add a category
-Edit the `categories` array in `app.js`. Add an object with:
-- `id`: unique, URL-safe identifier
-- `icon`: a short text symbol
-- `title`: category name
-- `description`: one-sentence explanation
-- `countLabel`: truthful status label
+From this directory, run:
 
-The homepage generates category cards from this list. This is intentionally expandable; the six initial categories are not a limit.
+    python -m http.server 8000
 
-## Before public launch
-1. Choose and connect the final free hosting/repository.
-2. Replace the contact placeholder with a working contact method.
-3. Review and complete legal pages for actual data practices.
-4. Check links, accessibility, mobile layout, and performance.
-5. Add real platform guides before promoting the site.
-6. Add subscription and subscriber-count features only after selecting a service that genuinely supports them.
-7. Never label an ordinary official link as a personal referral link.
-8. Do not publish invented subscriber counts, testimonials, or earning claims.
+Then open http://127.0.0.1:8000 in your browser.
 
-## Current status
-Starter scaffold only. No real subscription form, analytics, user accounts, referral tracking, or backend has been connected yet.
+## Important limitations
+
+- Platform eligibility, availability, rewards, and payout methods may vary by country and change over time.
+- Information that has not been independently verified must not be presented as confirmed.
+- The Scam & Safety Centre provides structural URL warnings only; it does not guarantee that a website is safe or fraudulent.
+- Earnings depend on individual circumstances. No income is guaranteed.
+- Affiliate or referral relationships must be disclosed clearly.
+- Do not publish fabricated testimonials, subscriber counts, or earnings claims.
+
+## Before launch
+
+- Test all pages, internal links, and interactive features.
+- Review legal pages against the website's actual practices.
+- Remove test data that could mislead visitors.
+- Confirm the public website URL and configure the sitemap and robots file.
+- Verify the mobile layout and accessibility.
