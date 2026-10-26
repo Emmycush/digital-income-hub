@@ -1,0 +1,24 @@
+# Backup copies
+*.backup
+*.backup-*
+*.before-*
+
+# Python cache and local development files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Development helper scripts
+add_*.py
+polish_mobile_dashboard.py
+update_dashboard.py
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# OS/editor files
+.DS_Store
+Thumbs.db

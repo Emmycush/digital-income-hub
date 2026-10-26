@@ -28,17 +28,49 @@
   </header>
 
   <main id="main">
+
+<div class="dashboard-layout">
+  <aside id="dashboard-sidebar" class="dashboard-sidebar" aria-label="Dashboard navigation">
+    <p class="dashboard-kicker">YOUR WORKSPACE</p>
+    <h2>Dashboard</h2>
+    <p class="dashboard-intro">Find opportunities and manage your next steps.</p>
+    <nav class="dashboard-nav" aria-label="Dashboard sections">
+      <a href="#main">Home</a>
+      <a href="#saved-opportunities">Saved Opportunities <span id="saved-nav-count">0</span></a>
+      <a href="#opportunity-finder">Opportunity Finder</a>
+      <a href="#comparison-centre">Opportunity Comparison</a>
+      <a href="#featured">Opportunity Guides</a>
+      <a href="#categories">Browse Categories</a>
+      <a href="#trust-labels">Verification Centre</a>
+<a href="#how-it-works">How It Works</a>
+      <a href="#updates">Updates</a>
+    </nav>
+    <div class="dashboard-future">
+
+      <a href="#earnings-tracker">Earnings Tracker</a>
+      <a href="#new-opportunity-alerts">New Opportunity Alerts</a>
+      <a href="#scam-safety">Scam &amp; Safety Checks</a>
+    </div>
+  </aside>
+  <div class="dashboard-content">
+    <button type="button" id="dashboard-toggle" class="dashboard-toggle"
+      aria-expanded="false" aria-controls="dashboard-sidebar">☰ Dashboard menu</button>
+
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> A practical guide to online opportunities</p>
-          <h1>Explore smarter.<br><span>Choose with confidence.</span></h1>
-          <p class="hero-text">Discover digital tools, survey sites, task platforms, Telegram bots, and affiliate programs—with clear guides to how they work, eligibility, and payout conditions.</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT OPPORTUNITY STARTS HERE</p>
+          <h1>Discover ways to earn online.<br><span>Choose your next move.</span></h1>
+          <p class="hero-text">Explore task platforms, survey opportunities, reward sites, AI tools, and affiliate programs. Compare how they work, understand the requirements, and check the details before you join.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#categories">Explore categories <span aria-hidden="true">→</span></a>
             <a class="button button-secondary" href="#how-it-works">How we check platforms</a>
           </div>
           <p class="hero-note">Free-to-start resources where possible. No guaranteed-income promises.</p>
+          <div class="hero-shortcuts" aria-label="Quick opportunity links">
+            <a href="#featured">Task &amp; reward guides <span>↗</span></a>
+            <a href="#categories">Browse all categories <span>↗</span></a>
+          </div>
         </div>
         <div class="hero-panel" aria-label="What each guide helps you check">
           <div class="panel-top"><span class="status-dot"></span> YOUR OPPORTUNITY CHECKLIST <span class="panel-version">01</span></div>
@@ -71,22 +103,654 @@
       </div>
     </section>
 
-    <section id="featured" class="section section-tinted">
+    <section id="comparison-centre" class="section comparison-section">
       <div class="container">
         <div class="section-heading">
-          <div><p class="eyebrow">Start with the basics</p><h2>Opportunity guides</h2></div>
-          <p>We’ll publish researched guides here as each platform is checked. We won’t present an unverified platform as endorsed or guaranteed.</p>
+          <div>
+            <p class="eyebrow">Make an informed choice</p>
+            <h2>Opportunity Comparison Centre</h2>
+          </div>
+          <p>Compare the kind of activity each platform offers and the details you should check before committing your time. No platform guarantees earnings.</p>
         </div>
-        <div class="empty-state">
-          <div class="empty-icon" aria-hidden="true">✳</div>
-          <h3>Our first guides are being prepared</h3>
-          <p>We’re checking platform features, country eligibility, referral terms, and withdrawal rules before publishing recommendations.</p>
-          <span class="status-label"><span class="status-dot"></span> Directory setup in progress</span>
+
+        <div class="comparison-toolbar">
+          <label for="comparison-filter">Compare by opportunity type</label>
+          <select id="comparison-filter">
+            <option value="all">All eight platforms</option>
+            <option value="task-rewards">Tasks &amp; rewards</option>
+            <option value="online-tasks">Online tasks</option>
+            <option value="crypto-rewards">Faucet &amp; crypto rewards</option>
+            <option value="freelancing">Freelancing &amp; client work</option>
+            <option value="telegram-mini-apps">Telegram mini-apps</option>
+          </select>
+          <p id="comparison-count" aria-live="polite">Showing 5 platforms</p>
         </div>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Platform</th>
+                <th scope="col">Opportunity type</th>
+                <th scope="col">What you may do</th>
+                <th scope="col">What to check first</th>
+                <th scope="col">Beginner's guide</th>
+              </tr>
+            </thead>
+            <tbody id="comparison-rows">
+              <tr data-compare-type="crypto-rewards">
+                <th scope="row">Fire Faucet</th>
+                <td>Faucet &amp; crypto rewards</td>
+                <td>Review current reward activities and platform availability.</td>
+                <td>Check country eligibility, withdrawal methods, minimums and fees.</td>
+                <td><a href="guides/firefaucet.html">Read guide →</a></td>
+              </tr>
+
+
+
+
+              <tr data-compare-type="task-rewards">
+                <th scope="row">Freecash</th>
+                <td>Tasks &amp; rewards</td>
+                <td>Explore available surveys, game offers and promotions.</td>
+                <td>Offer conditions, country eligibility, withdrawal methods and minimums.</td>
+                <td><a href="guides/freecash.html">Read guide →</a></td>
+              </tr>
+              <tr data-compare-type="online-tasks">
+                <th scope="row">Paidwork</th>
+                <td>Online tasks</td>
+                <td>Review the tasks and reward activities available to your account.</td>
+                <td>Task rules, regional availability, verification and withdrawal conditions.</td>
+                <td><a href="guides/paidwork.html">Read guide →</a></td>
+              </tr>
+              <tr data-compare-type="crypto-rewards">
+                <th scope="row">VieFaucet</th>
+                <td>Faucet &amp; crypto rewards</td>
+                <td>Investigate faucet and reward activities before participating.</td>
+                <td>Current operation, withdrawal availability, network fees and wallet safety.</td>
+                <td><a href="guides/viefaucet.html">Read guide →</a></td>
+              </tr>
+              <tr data-compare-type="freelancing">
+                <th scope="row">Upwork</th>
+                <td>Freelancing</td>
+                <td>Find client projects that match your skills and submit proposals.</td>
+                <td>Proposal costs, contract fees, client terms, country eligibility and payment options.</td>
+                <td><a href="guides/upwork.html">Read guide →</a></td>
+              </tr>
+              <tr data-compare-type="freelancing">
+                <th scope="row">Fiverr</th>
+                <td>Freelancing</td>
+                <td>Create service listings and fulfil eligible client orders.</td>
+                <td>Seller fees, order requirements, competition and regional withdrawal options.</td>
+                <td><a href="guides/fiverr.html">Read guide →</a></td>
+              </tr>
+
+              <tr data-compare-type="online-tasks">
+                <th scope="row">Anoworks</th>
+                <td>Online tasks</td>
+                <td>Review tasks and requirements shown by the service.</td>
+                <td>Verify country eligibility, task rules, payout methods, minimums and fees.</td>
+                <td><a href="guides/anoworks.html">Read guide →</a></td>
+              </tr>
+              <tr data-compare-type="telegram-mini-apps">
+                <th scope="row">Telegram Mini-Apps (3)</th>
+                <td>Telegram mini-apps</td>
+                <td>Review the supplied Earncraft, FarmVibe and SpinFi invitations.</td>
+                <td>Verify operators, reward terms, privacy, wallet requests and withdrawal claims.</td>
+                <td><a href="guides/telegram-mini-apps.html">Read guide →</a></td>
+              </tr>
+</tbody>
+          </table>
+        </div>
+        <p class="comparison-note">This is a general educational comparison, not a guarantee of eligibility, work, rewards or payment. Platform rules can change. Confirm current terms and fees on each official website before participating.</p>
       </div>
     </section>
 
-    <section id="how-it-works" class="section">
+<section id="country-eligibility" class="section section-tinted">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">CHECK BEFORE YOU JOIN</p>
+        <h2>Country Eligibility Checker</h2>
+      </div>
+      <p>Choose your country and a platform to review what still needs checking. Country access, available tasks and withdrawal options are different things.</p>
+    </div>
+
+    <div class="country-checker-panel">
+      <div class="country-checker-controls">
+        <label for="eligibility-country">Your country
+          <input id="eligibility-country" type="search" list="eligibility-country-list"
+            placeholder="Type your country..." autocomplete="country-name">
+          <datalist id="eligibility-country-list"></datalist>
+        </label>
+
+        <label for="eligibility-platform">Platform
+          <select id="eligibility-platform">
+            <option value="all">Compare all listed platforms</option>
+            <option value="Freecash">Freecash</option>
+            <option value="Paidwork">Paidwork</option>
+            <option value="VieFaucet">VieFaucet</option>
+            <option value="Fire Faucet">Fire Faucet</option>
+            <option value="Anoworks">Anoworks</option>
+            <option value="Telegram Mini-Apps">Telegram Mini-Apps</option>
+            <option value="Upwork">Upwork</option>
+            <option value="Fiverr">Fiverr</option>
+          </select>
+        </label>
+        <button type="button" class="button button-primary" id="eligibility-check">
+          Check eligibility
+        </button>
+      </div>
+
+      <div id="eligibility-results" class="eligibility-results" aria-live="polite">
+        <p>Enter a country, choose a platform and select “Check eligibility”.</p>
+      </div>
+
+      <p class="country-checker-note">
+        <strong>Evidence policy:</strong> Results begin as “Needs verification”.
+        This tool does not claim that a platform accepts or rejects a country
+        without current supporting evidence. Even where registration is allowed,
+        tasks, surveys, features and payment methods may be restricted.
+        Always confirm the latest official terms before spending time or money.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="featured" class="section section-tinted">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Start with the basics</p>
+            <h2>Opportunity guides</h2>
+          </div>
+          <p>Explore platforms and learn what to check before joining. Availability, rewards and withdrawals vary by country.</p>
+        </div>
+
+        <div id="opportunity-finder" class="opportunity-finder">
+          <div class="finder-heading">
+            <span class="finder-kicker">OPPORTUNITY CONTROL CENTRE</span>
+
+<!-- DIH_GOAL_FINDER_V1 -->
+<div class="goal-finder" id="goal-finder">
+  <p class="eyebrow">PERSONALISE YOUR SEARCH</p>
+  <h3>What would you like to explore?</h3>
+  <p>Choose a goal to find relevant introductory guides. These are starting points, not guarantees of work, rewards or income.</p>
+  <div class="goal-finder-controls">
+    <label for="goal-choice">My main goal</label>
+    <select id="goal-choice">
+      <option value="beginner">I'm new and want to explore</option>
+            <option value="tasks">Try online tasks and rewards</option>
+            <option value="freelance">Find freelance client work</option>
+            <option value="crypto">Explore crypto reward platforms</option>
+    </select>
+    <button type="button" id="goal-find-button">Show relevant guides</button>
+  </div>
+  <div id="goal-results" class="goal-results" aria-live="polite">
+    <p>Choose a goal and select “Show relevant guides”.</p>
+  </div>
+  <p class="goal-finder-note">Before joining, check country eligibility, current terms, fees and withdrawal options. Crypto activities involve additional wallet and financial risks.</p>
+</div>
+<h3>Find an opportunity to explore</h3>
+            <p>Search the current guides and narrow the list by opportunity type.</p>
+          </div>
+          <div class="finder-controls">
+            <label class="finder-search">
+              <span>Search opportunities</span>
+              <input id="opportunity-search" type="search"
+                placeholder="Try surveys, tasks, crypto..."
+                autocomplete="off">
+            </label>
+            <label class="finder-filter">
+              <span>Opportunity type</span>
+              <select id="opportunity-filter">
+                <option value="all">All opportunity types</option>
+            <option value="task-rewards">Tasks &amp; rewards</option>
+            <option value="online-tasks">Online tasks</option>
+            <option value="freelancing">Freelancing &amp; client work</option>
+            <option value="crypto-rewards">Crypto rewards</option>
+            <option value="telegram-mini-apps">Telegram mini-apps</option>
+              </select>
+            </label>
+            <button class="finder-reset" id="opportunity-reset" type="button">
+              Reset
+            </button>
+          </div>
+          <div class="finder-status" aria-live="polite">
+            Showing <strong id="opportunity-count">3</strong> current guides
+          </div>
+        </div>
+
+
+
+<div class="steps-grid provider-grid" id="opportunity-results">
+  <!-- DIH_FIREFAUCET_SITE_V1 -->
+  <article class="step-card opportunity-card" data-opportunity-type="crypto-rewards">
+    <div class="provider-card-top">
+      <span class="provider-icon" aria-hidden="true">FF</span>
+      <span class="provider-type">FAUCET &amp; CRYPTO REWARDS</span>
+    </div>
+    <h3>Fire Faucet</h3>
+    <p>Check current availability, reward conditions, withdrawal requirements and wallet safety.</p>
+    <div class="provider-tags"><span>Eligibility checks</span><span>Payout checks</span></div>
+    <a class="provider-link" href="guides/firefaucet.html">Explore provider guide <span aria-hidden="true">→</span></a>
+  </article>
+      <!-- DIH_ANOWORKS_TELEGRAM_V1 -->
+      <article class="step-card opportunity-card" data-opportunity-type="online-tasks">
+        <div class="provider-card-top">
+          <span class="provider-icon" aria-hidden="true">AW</span>
+          <span class="provider-type">INITIAL GUIDE · NEEDS VERIFICATION</span>
+        </div>
+        <h3>Anoworks</h3>
+        <p>Review task requirements, country eligibility and withdrawal terms before joining.</p>
+        <div class="provider-tags"><span>Eligibility checks</span><span>Payout checks</span></div>
+        <a class="provider-link" href="guides/anoworks.html">Explore guide <span aria-hidden="true">→</span></a>
+      </article>
+
+      <!-- DIH_ANOWORKS_TELEGRAM_V1 -->
+      <article class="step-card opportunity-card" data-opportunity-type="telegram-mini-apps">
+        <div class="provider-card-top">
+          <span class="provider-icon" aria-hidden="true">TG</span>
+          <span class="provider-type">INITIAL GUIDE · NEEDS VERIFICATION</span>
+        </div>
+        <h3>Telegram Mini-Apps</h3>
+        <p>Explore three supplied mini-app invitations cautiously; rewards and payouts are unverified.</p>
+        <div class="provider-tags"><span>Eligibility checks</span><span>Payout checks</span></div>
+        <a class="provider-link" href="guides/telegram-mini-apps.html">Explore guide <span aria-hidden="true">→</span></a>
+      </article>
+
+
+          <article class="step-card opportunity-card" data-opportunity-type="task-rewards">
+            <div class="provider-card-top">
+              <span class="provider-icon" aria-hidden="true">FC</span>
+              <span class="provider-type">TASKS &amp; REWARDS</span>
+            </div>
+            <h3>Freecash</h3>
+            <p>Explore surveys, game offers and other reward activities. Check offer rules and eligibility before starting.</p>
+            <div class="provider-tags"><span>Offer conditions</span><span>Payout checks</span></div>
+            <a class="provider-link" href="guides/freecash.html">Explore provider guide <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="step-card opportunity-card" data-opportunity-type="online-tasks">
+            <div class="provider-card-top">
+              <span class="provider-icon" aria-hidden="true">PW</span>
+              <span class="provider-type">ONLINE TASKS</span>
+            </div>
+            <h3>Paidwork</h3>
+            <p>Learn how tasks and reward activities work, what conditions apply, and what to check before withdrawing.</p>
+            <div class="provider-tags"><span>Task requirements</span><span>Withdrawal checks</span></div>
+            <a class="provider-link" href="guides/paidwork.html">Explore provider guide <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="step-card opportunity-card" data-opportunity-type="crypto-rewards">
+            <div class="provider-card-top">
+              <span class="provider-icon" aria-hidden="true">VF</span>
+              <span class="provider-type">FAUCET REWARDS</span>
+            </div>
+            <h3>VieFaucet</h3>
+            <p>Review faucet activities, reward conditions, wallet safety and potential fees before participating.</p>
+            <div class="provider-tags"><span>Crypto awareness</span><span>Safety first</span></div>
+            <a class="provider-link" href="guides/viefaucet.html">Explore provider guide <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="step-card opportunity-card" data-opportunity-type="freelancing">
+            <div class="provider-card-top">
+              <span class="provider-icon" aria-hidden="true">UP</span>
+              <span class="provider-type">FREELANCE MARKETPLACE</span>
+            </div>
+            <h3>Upwork</h3>
+            <p>Explore client projects and freelance work. Learn about proposals, contract terms, platform fees, eligibility, and payment protection.</p>
+            <div class="provider-tags"><span>Client projects</span><span>Fee checks</span></div>
+            <a class="provider-link" href="guides/upwork.html">Explore provider guide <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="step-card opportunity-card" data-opportunity-type="freelancing">
+            <div class="provider-card-top">
+              <span class="provider-icon" aria-hidden="true">F</span>
+              <span class="provider-type">FREELANCE MARKETPLACE</span>
+            </div>
+            <h3>Fiverr</h3>
+            <p>Learn how service listings and client orders work, and what to check about seller fees, delivery requirements, and withdrawals.</p>
+            <div class="provider-tags"><span>Service listings</span><span>Payout checks</span></div>
+            <a class="provider-link" href="guides/fiverr.html">Explore provider guide <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+
+        <div id="opportunity-empty" class="finder-empty" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3>No matching guides yet</h3>
+          <p>Try another search or reset the filters to see all current guides.</p>
+        </div>
+
+        <p class="status-label"><span class="status-dot"></span> Initial guides published — platform details still require verification</p>
+      </div>
+    </section>
+
+
+
+
+
+<!-- DIH_GUIDE_BOARD_V1 -->
+<section class="section guide-board-section" id="guide-board">
+  <div class="container">
+    <p class="eyebrow">GUIDE DISCOVERY</p>
+    <h2>New &amp; Updated Guides</h2>
+    <p>Explore the current guide collection. Publication and review dates are not yet recorded, so this list does not claim that any guide is newly published or recently verified.</p>
+
+    <div class="guide-board-grid">
+      <article class="guide-board-card">
+        <span class="guide-board-type">FAUCET &amp; CRYPTO REWARDS</span>
+        <h3>Fire Faucet</h3>
+        <p>Review current availability, withdrawal conditions, fees and wallet safety.</p>
+        <p class="guide-board-date">Review date: not recorded</p>
+        <a href="./guides/firefaucet.html">Read the guide →</a>
+      </article>
+      <!-- DIH_ANOWORKS_TELEGRAM_V1 -->
+      <article class="guide-board-card">
+        <span class="guide-board-type">ONLINE TASKS · INITIAL GUIDE</span>
+        <h3>Anoworks</h3>
+        <p>Check task rules, country eligibility and withdrawal conditions.</p>
+        <p class="guide-board-date">Review date: not recorded</p>
+        <a href="./guides/anoworks.html">Read the guide →</a>
+      </article>
+      <article class="guide-board-card">
+        <span class="guide-board-type">TELEGRAM MINI-APPS · INITIAL GUIDE</span>
+        <h3>Telegram Mini-Apps</h3>
+        <p>Review supplied invitations, safety risks and unverified payout claims.</p>
+        <p class="guide-board-date">Review date: not recorded</p>
+        <a href="./guides/telegram-mini-apps.html">Read the guide →</a>
+      </article>
+
+
+      <article class="guide-board-card">
+        <span class="guide-board-type">TASKS &amp; REWARDS</span>
+        <h3>Freecash</h3>
+        <p>Explore offer rules, eligibility and withdrawal conditions.</p>
+        <p class="guide-board-date">Review date: not recorded</p>
+        <a href="./guides/freecash.html">Read the guide →</a>
+      </article>
+
+      <article class="guide-board-card">
+        <span class="guide-board-type">ONLINE TASKS</span>
+        <h3>Paidwork</h3>
+        <p>Check task requirements, verification and payout conditions.</p>
+        <p class="guide-board-date">Review date: not recorded</p>
+        <a href="./guides/paidwork.html">Read the guide →</a>
+      </article>
+
+      <article class="guide-board-card">
+        <span class="guide-board-type">CRYPTO REWARDS</span>
+        <h3>VieFaucet</h3>
+        <p>Review withdrawal terms, network fees and wallet risks.</p>
+        <p class="guide-board-date">Review date: not recorded</p>
+        <a href="./guides/viefaucet.html">Read the guide →</a>
+      </article>
+
+      <article class="guide-board-card">
+        <span class="guide-board-type">FREELANCING</span>
+        <h3>Upwork</h3>
+        <p>Learn about proposals, client terms, fees and payments.</p>
+        <p class="guide-board-date">Review date: not recorded</p>
+        <a href="./guides/upwork.html">Read the guide →</a>
+      </article>
+
+      <article class="guide-board-card">
+        <span class="guide-board-type">FREELANCING</span>
+        <h3>Fiverr</h3>
+        <p>Understand service listings, seller fees and withdrawals.</p>
+        <p class="guide-board-date">Review date: not recorded</p>
+        <a href="./guides/fiverr.html">Read the guide →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="saved-opportunities" class="section saved-section">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL LIST</p>
+        <h2>Saved Opportunities</h2>
+      </div>
+      <p>Keep useful guides in one place. Your list is stored in this browser and is not synced across devices.</p>
+    </div>
+    <div id="saved-opportunities-list" class="saved-opportunities-list" aria-live="polite">
+      <p class="saved-empty">Loading your saved opportunities…</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="earnings-tracker" class="section earnings-section">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL RECORDS</p>
+        <h2>Earnings Tracker</h2>
+      </div>
+      <p>Record amounts you report earning from different platforms and keep track of dates and currencies.</p>
+    </div>
+
+    <div class="earnings-notice">
+      <strong>Manual records — not verified payouts</strong>
+      <p>Amounts are entered by you. Digital Income Hub does not connect to platform accounts or verify payments. Keep your own supporting records.</p>
+    </div>
+
+    <form id="earnings-form" class="earnings-form">
+      <label>
+        <span>Platform</span>
+        <select id="earnings-platform" required>
+          <option value="">Choose a platform</option>
+            <option>Freecash</option>
+            <option>Paidwork</option>
+            <option>VieFaucet</option>
+            <option>Fire Faucet</option>
+            <option>Anoworks</option>
+            <option>Telegram Mini-Apps</option>
+            <option>Upwork</option>
+            <option>Fiverr</option>
+            <option>Other</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Amount</span>
+        <input id="earnings-amount" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="e.g. 25.00" required>
+      </label>
+
+      <label>
+        <span>Currency</span>
+        <select id="earnings-currency" required>
+          <option value="NGN">NGN — Nigerian naira</option>
+            <option value="USD">USD — US dollar</option>
+            <option value="GBP">GBP — British pound</option>
+            <option value="EUR">EUR — euro</option>
+            <option value="CAD">CAD — Canadian dollar</option>
+            <option value="AUD">AUD — Australian dollar</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Date earned</span>
+        <input id="earnings-date" type="date" required>
+      </label>
+
+      <label class="earnings-note-field">
+        <span>Note (optional)</span>
+        <input id="earnings-note" type="text" maxlength="160" placeholder="e.g. Freelance project payment">
+      </label>
+
+      <button class="button button-primary earnings-submit" type="submit">Add record</button>
+      <p id="earnings-form-message" class="earnings-message" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="earnings-summary">
+      <h3>Recorded totals</h3>
+      <p class="earnings-summary-note">Totals are grouped by currency. No currency conversion is applied.</p>
+      <div id="earnings-totals" class="earnings-totals" aria-live="polite"></div>
+    </div>
+
+    <div class="earnings-records-heading">
+      <h3>Your records</h3>
+      <span id="earnings-record-count">0 records</span>
+    </div>
+    <div id="earnings-records" class="earnings-records" aria-live="polite">
+      <p class="earnings-empty">No records yet. Add your first entry above.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="scam-safety" class="section scam-safety-section">
+  <div class="section-heading">
+    <p class="eyebrow">LINK RISK ASSESSMENT</p>
+    <h2>Scam &amp; Safety Centre</h2>
+    <p>Inspect a URL for suspicious patterns before deciding whether to trust it.
+    Analysis happens in this browser; the tool does not open or submit the URL.</p>
+  </div>
+
+  <div class="scam-tool-panel">
+    <form id="dih-url-form">
+      <label for="dih-url-input">Website or link to inspect</label>
+      <input id="dih-url-input" name="url" type="text"
+        inputmode="url" autocomplete="url" maxlength="2048"
+        placeholder="https://example.com" required>
+      <p class="scam-field-help">Enter the link as text. Do not include passwords,
+      private tokens, or other confidential information in a URL you share.</p>
+      <button type="submit" class="scam-inspect-button">Inspect link</button>
+    </form>
+    <div id="dih-url-result" class="scam-result" aria-live="polite" hidden></div>
+  </div>
+
+  <div class="scam-checklist-panel">
+    <h3>Before you trust an earning opportunity</h3>
+    <p>Use this checklist as a second layer of protection. Checking every item
+    does not prove that a platform is legitimate.</p>
+    <div class="scam-checklist">
+      <label><input type="checkbox"> I found the platform through a trustworthy source.</label>
+      <label><input type="checkbox"> The domain matches the platform's independently confirmed official domain.</label>
+      <label><input type="checkbox"> I checked the withdrawal terms, fees and eligibility rules.</label>
+      <label><input type="checkbox"> It does not demand suspicious upfront payments to unlock supposed earnings.</label>
+      <label><input type="checkbox"> I will not share passwords, one-time codes or wallet seed phrases.</label>
+      <label><input type="checkbox"> I checked independent sources and current platform terms.</label>
+    </div>
+  </div>
+
+  <p class="scam-limit-note"><strong>Important limitation:</strong>
+  This is a local structural assessment, not a definitive scam detector.
+  It does not check live threat-intelligence databases, domain ownership,
+  website content, redirects, or actual payment behaviour. A clean result
+  does not mean a link is safe, and a warning does not by itself prove fraud.
+  Never visit a suspicious link just to test it.</p>
+<!-- DIH_TRUST_LABELS_V1 -->
+<section id="trust-labels" class="section trust-section">
+  <div class="container">
+    <p class="eyebrow">TRANSPARENCY &amp; REVIEW STATUS</p>
+    <h2>Opportunity Verification Centre</h2>
+    <p class="section-intro">
+      Check what has and has not been confirmed before spending time on an
+      opportunity. These labels describe the current state of our guides,
+      not a guarantee that a platform is safe, available, or pays users.
+    </p>
+
+    <div class="trust-legend">
+      <span class="trust-label trust-pending">Needs verification</span>
+      <span>Details have not yet been independently confirmed.</span>
+      <span class="trust-label trust-disclose">Check link disclosure</span>
+      <span>Read the guide to identify official and referral links.</span>
+    </div>
+
+    <div class="trust-table-wrap">
+      <table class="trust-table">
+        <thead>
+          <tr>
+            <th scope="col">Platform</th>
+            <th scope="col">Guide status</th>
+            <th scope="col">Eligibility</th>
+            <th scope="col">Payout details</th>
+            <th scope="col">Links</th>
+            <th scope="col">Guide</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Freecash</th>
+            <td><span class="trust-label trust-pending">Initial guide</span></td>
+            <td>Check current country rules</td>
+            <td>Check methods, minimums and conditions</td>
+            <td><span class="trust-label trust-disclose">Review guide</span></td>
+            <td><a href="guides/freecash.html">Read guide →</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Paidwork</th>
+            <td><span class="trust-label trust-pending">Initial guide</span></td>
+            <td>Check current country rules</td>
+            <td>Check methods, minimums and conditions</td>
+            <td><span class="trust-label trust-disclose">Review guide</span></td>
+            <td><a href="guides/paidwork.html">Read guide →</a></td>
+          </tr>
+          <tr>
+            <th scope="row">VieFaucet</th>
+            <td><span class="trust-label trust-pending">Initial guide</span></td>
+            <td>Check current availability</td>
+            <td>Check withdrawals, fees and wallet risks</td>
+            <td><span class="trust-label trust-disclose">Review guide</span></td>
+            <td><a href="guides/viefaucet.html">Read guide →</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Upwork</th>
+            <td><span class="trust-label trust-pending">Initial guide</span></td>
+            <td>Check account and payment eligibility</td>
+            <td>Check fees and payment options</td>
+            <td><span class="trust-label trust-disclose">Review guide</span></td>
+            <td><a href="guides/upwork.html">Read guide →</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Fiverr</th>
+            <td><span class="trust-label trust-pending">Initial guide</span></td>
+            <td>Check seller and payment eligibility</td>
+            <td>Check fees and withdrawal options</td>
+            <td><span class="trust-label trust-disclose">Review guide</span></td>
+            <td><a href="guides/fiverr.html">Read guide →</a></td>
+          </tr>
+
+              <tr>
+                <th scope="row">Fire Faucet</th>
+                <td><span class="trust-label trust-pending">Initial guide</span></td>
+                <td>Check current country rules and site availability.</td>
+                <td>Confirm withdrawal methods, minimums, fees and conditions.</td>
+                <td><a href="guides/firefaucet.html">Read guide →</a></td>
+              </tr>
+
+          <tr>
+            <th scope="row">Anoworks</th>
+            <td><span class="trust-label trust-pending">Initial guide</span></td>
+            <td>Eligibility and task availability not independently confirmed</td>
+            <td>Verify payout methods, minimums, fees and conditions</td>
+            <td><span class="trust-label trust-disclose">Review guide</span></td>
+            <td><a href="guides/anoworks.html">Read guide →</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Telegram Mini-Apps (3)</th>
+            <td><span class="trust-label trust-pending">Initial guide</span></td>
+            <td>Operators and availability not independently confirmed</td>
+            <td>Verify reward claims, withdrawal rules and wallet safety</td>
+            <td><span class="trust-label trust-disclose">Review guide</span></td>
+            <td><a href="guides/telegram-mini-apps.html">Read guide →</a></td>
+          </tr>
+
+</tbody>
+      </table>
+    </div>
+
+    <p class="trust-note">
+      <strong>Review policy:</strong> No platform is marked verified by this
+      table. Check current information against the platform's own terms and
+      reliable independent sources before changing a status. A referral link
+      is not the same as an official, non-referral link.
+    </p>
+  </div>
+</section>
+
+<section id="how-it-works" class="section">
       <div class="container">
         <div class="section-heading">
           <div><p class="eyebrow">Our approach</p><h2>Understand it before you join</h2></div>
@@ -100,7 +764,77 @@
       </div>
     </section>
 
-    <section id="updates" class="updates-section">
+
+<section id="new-opportunity-alerts" class="section opportunity-updates">
+  <div class="section-heading">
+    <p class="eyebrow">GUIDE UPDATE FEED</p>
+    <h2>New Opportunity Alerts</h2>
+    <p>Find the opportunity guides currently available on Digital Income Hub.
+    Check back as new guides and revisions are added.</p>
+  </div>
+
+  <div class="updates-notice">
+    <strong>On-site updates only</strong>
+    <p>This feed links to guides on this website. Email alerts are not active,
+    and this page does not collect email addresses or subscribe you to messages.</p>
+  </div>
+
+  <div class="update-guide-list">
+    <article class="update-guide">
+      <span class="update-category">FAUCET &amp; CRYPTO REWARDS</span>
+      <h3>Fire Faucet</h3>
+      <p>Check current platform availability, withdrawal terms and wallet safety.</p>
+      <a href="./guides/firefaucet.html">Read the guide →</a>
+    </article>
+      <!-- DIH_ANOWORKS_TELEGRAM_V1 -->
+      <article class="guide-board-card">
+        <span class="guide-board-type">ONLINE TASKS · INITIAL GUIDE</span>
+        <h3>Anoworks</h3>
+        <p>Eligibility, task requirements and withdrawal checks.</p>
+        <a href="./guides/anoworks.html">Read the guide →</a>
+      </article>
+      <article class="guide-board-card">
+        <span class="guide-board-type">TELEGRAM MINI-APPS · INITIAL GUIDE</span>
+        <h3>Telegram Mini-Apps</h3>
+        <p>Safety checks for the supplied mini-app invitations.</p>
+        <a href="./guides/telegram-mini-apps.html">Read the guide →</a>
+      </article>
+
+
+    <article class="update-guide">
+      <span class="update-category">TASKS &amp; REWARDS</span>
+      <h3>Freecash</h3>
+      <p>Review offer rules, country eligibility and withdrawal conditions.</p>
+      <a href="./guides/freecash.html">Read the guide →</a>
+    </article>
+    <article class="update-guide">
+      <span class="update-category">ONLINE TASKS</span>
+      <h3>Paidwork</h3>
+      <p>Learn what to check about tasks, verification and withdrawals.</p>
+      <a href="./guides/paidwork.html">Read the guide →</a>
+    </article>
+    <article class="update-guide">
+      <span class="update-category">FAUCET &amp; CRYPTO REWARDS</span>
+      <h3>VieFaucet</h3>
+      <p>Review reward conditions, wallet safety and possible network fees.</p>
+      <a href="./guides/viefaucet.html">Read the guide →</a>
+    </article>
+    <article class="update-guide">
+      <span class="update-category">FREELANCING</span>
+      <h3>Upwork</h3>
+      <p>Check proposals, client terms, fees and payment options.</p>
+      <a href="./guides/upwork.html">Read the guide →</a>
+    </article>
+    <article class="update-guide">
+      <span class="update-category">FREELANCING</span>
+      <h3>Fiverr</h3>
+      <p>Understand service listings, seller fees and withdrawal requirements.</p>
+      <a href="./guides/fiverr.html">Read the guide →</a>
+    </article>
+  </div>
+</section>
+
+<section id="updates" class="updates-section">
       <div class="container updates-inner">
         <div>
           <p class="eyebrow">Stay in the loop</p>
@@ -114,7 +848,10 @@
         </div>
       </div>
     </section>
-  </main>
+
+  </div>
+</div>
+</main>
 
   <footer class="site-footer">
     <div class="container footer-main">
